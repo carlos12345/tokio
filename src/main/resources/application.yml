@@ -1,0 +1,20 @@
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/banco
+    username: postgres
+    password: example
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+aws:
+  region: sa-east-1
+  sqs:
+    queue-url: https://sqs.sa-east-1.amazonaws.com/123456789012/banco-transactions
+
+security:
+  jwt:
+    secret: "troque-por-variavel-ambiente-com-256-bits"
+    expiration-ms: 3600000
